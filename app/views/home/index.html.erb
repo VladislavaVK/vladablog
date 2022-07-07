@@ -1,6 +1,11 @@
  <% if user_signed_in? %>
-    <span>Здравствуйте, <%= current_user.email %></span>
-   <h3 style="color:#FF1493"> <%= link_to 'Изменить пароль', edit_user_registration_path, :class => 'navbar-link'%> </h3>
+    <span>Здравствуйте, <%= current_user.last_name %></span>
+      <span> <%= current_user.first_name %></span>
+      <span> <%= current_user.email %></span>
+   <h3 style="color:#FF1493"> <%= link_to 'Редактировать', edit_user_registration_path, :class => '
+   navbar-link'%> </h3>
+  
+  
    <h3 style="color:#FF1493"> <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></h3>
 <% else %>
     <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
