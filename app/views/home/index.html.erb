@@ -1,2 +1,10 @@
+ <% if user_signed_in? %>
+    <span>Здравствуйте, <%= current_user.email %></span>
+   <h3 style="color:#FF1493"> <%= link_to 'Изменить пароль', edit_user_registration_path, :class => 'navbar-link'%> </h3>
+   <h3 style="color:#FF1493"> <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></h3>
+<% else %>
+    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+<% end %>
+
 <h1 style="color:#ff0000">Women's blog "DAY"</h1>
-<p> <h3>Добро пожаловать! </h3></p>
+<p> <h3>Эти ноты в парфюмерной воде и ароматических свечах способствуют расслаблению — рассказываем, в каких средствах их искать. </h3></p>
