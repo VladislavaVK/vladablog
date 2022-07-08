@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+ get "/draft", to: "draft#index"
   # get 'home/index'
   devise_for :users
   # get 'persons/profile'
