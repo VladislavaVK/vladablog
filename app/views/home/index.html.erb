@@ -19,7 +19,6 @@
     <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
 <% else %>
     <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
-    <p><a href="/articles/">Пере</a></p>
 <% end %>
 <p>All articles</p>
 Our blog has <%= @articles.count %> articles and counting!
