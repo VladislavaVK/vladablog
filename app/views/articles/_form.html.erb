@@ -17,10 +17,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
-  </div>
-
-  <div>
   <%= form.label :status %><br>
   <%= form.select :status, ['public', 'draft'] %><br>
   <% article.errors.full_messages_for(:status).each do |message| %>

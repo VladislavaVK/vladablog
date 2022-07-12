@@ -11,4 +11,5 @@ class Article < ApplicationRecord
   def draft?
       status == 'draft'
   end
+
 end 
