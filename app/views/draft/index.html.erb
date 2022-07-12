@@ -2,7 +2,7 @@
 <ul>
   <% @articles.each do |article| %>
   <% if current_user.id == article.user_id %>
-    <% unless !article.draft? %>
+    <% if article.draft? %>
       <li>
         <a href="<%= article_path(article) %>/edit">
         <%= article.title %>
